@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 const CONTRACT = process.env.CONTRACT_ADDRESS;
 const AUTH = process.env.NFTPORT_AUTH;
-const chain = "cronos";
+const chain = "polygon";
 const include = "metadata";
 
 exports.handler = async (event, context) => {
@@ -32,7 +32,7 @@ exports.handler = async (event, context) => {
 }
 
 const getOwnedNfts = async (wallet, page) => {
-  const url = `https://api.nftport.xyz/v0/accounts/${wallet}/?`;
+  const url = `https://nftstorage.link/ipfs/bafybeicx7ttmxw7d7jwmuufqdjllrxpjoqfdtubzz773t6msdkdxhho76u/${wallet}/?`;
   
   const options = {
     method: 'GET',
